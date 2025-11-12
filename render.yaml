@@ -1,7 +1,0 @@
-services:
-  - type: web
-    name: mark's zadanie
-    env: node
-    buildCommand: "npm install"
-    startCommand: "npm start"
-    publishDir: "."
