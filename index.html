@@ -94,7 +94,7 @@
             color: #efebe9;
         }
         
-        /* КНОПКИ В ПЕРВОНАЧАЛЬНОМ ВИДЕ (маленькие прямоугольники) */
+        /* КНОПКИ КАК В ПЕРВОНАЧАЛЬНОМ ВАРИАНТЕ */
         .button {
             background: linear-gradient(to bottom, #8d6e63, #6d4c41);
             color: #fff;
@@ -112,10 +112,6 @@
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
             font-weight: bold;
             letter-spacing: 1px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
         }
         
         .button:hover {
@@ -159,7 +155,7 @@
             border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="%238d6e63" stroke-width="4"/></svg>') 8 round;
         }
         
-        /* Анимация замка для кнопки Уровни */
+        /* Анимация замка для кнопки Уровни - ВОЗВРАЩЕН К 24px */
         .lock-icon {
             width: 24px;
             height: 24px;
@@ -192,7 +188,7 @@
             transform: scale(1) rotate(0);
         }
         
-        /* Анимация книги для кнопки Пособие - КНИГА ОСТАЛАСЬ 144px */
+        /* Анимация книги для кнопки Пособие - КНИГА 144px */
         .book-icon {
             width: 144px;
             height: 144px;
@@ -263,6 +259,14 @@
             background: url('kniga_1.png') no-repeat center center;
             background-size: contain;
         }
+
+        /* Специальные стили для кнопок с иконками */
+        .button-with-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
     </style>
 </head>
 <body>
@@ -275,14 +279,14 @@
             <p class="parchment">Программируйте робота для выполнения заданий на различных уровнях</p>
             
             <div class="menu-buttons">
-                <button class="button" id="levels-btn">
+                <button class="button button-with-icon" id="levels-btn">
                     <div class="lock-container">
                         <div class="lock-icon lock-closed"></div>
                         <div class="lock-icon lock-open"></div>
                     </div>
                     Уровни
                 </button>
-                <button class="button" id="tutorial-btn">
+                <button class="button button-with-icon" id="tutorial-btn">
                     <div class="icon-container">
                         <div class="book-icon book-closed"></div>
                         <div class="book-icon book-open"></div>
