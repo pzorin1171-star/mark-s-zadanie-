@@ -94,14 +94,14 @@
             background: linear-gradient(to bottom, #8d6e63, #6d4c41);
             color: #fff;
             border: none;
-            padding: 20px 40px;
-            font-size: 28px;
+            padding: 25px 50px;
+            font-size: 32px;
             border-radius: 5px;
             cursor: pointer;
             margin: 15px;
             transition: all 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            min-width: 300px;
+            min-width: 350px;
             text-align: center;
             border: 2px solid #5d4037;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -110,7 +110,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
         }
         
         .button:hover {
@@ -135,7 +135,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 700px;
+            max-width: 800px;
         }
         
         .parchment {
@@ -187,10 +187,10 @@
             transform: scale(1) rotate(0);
         }
         
-        /* Анимация книги для кнопки Пособие - увеличенная в 2 раза */
+        /* Анимация книги для кнопки Пособие - увеличенная в 3 раза */
         .book-icon {
-            width: 48px;
-            height: 48px;
+            width: 72px; /* Увеличено с 48px до 72px (в 3 раза от исходного 24px) */
+            height: 72px; /* Увеличено с 48px до 72px (в 3 раза от исходного 24px) */
             transition: transform 0.5s ease, opacity 0.5s ease;
             position: relative;
         }
@@ -222,6 +222,16 @@
         
         .icon-container {
             position: relative;
+            width: 72px; /* Увеличено с 48px до 72px для книги */
+            height: 72px; /* Увеличено с 48px до 72px для книги */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        /* Специальный контейнер для замка, чтобы сохранить размер 48px */
+        .lock-container {
+            position: relative;
             width: 48px;
             height: 48px;
             display: flex;
@@ -241,7 +251,7 @@
             
             <div class="menu-buttons">
                 <button class="button" id="levels-btn">
-                    <div class="icon-container">
+                    <div class="lock-container">
                         <div class="lock-icon lock-closed"></div>
                         <div class="lock-icon lock-open"></div>
                     </div>
