@@ -94,18 +94,19 @@
             color: #efebe9;
         }
         
+        /* УМЕНЬШЕННЫЕ КНОПКИ */
         .button {
             background: linear-gradient(to bottom, #8d6e63, #6d4c41);
             color: #fff;
             border: none;
-            padding: 25px 50px;
-            font-size: 32px;
+            padding: 15px 30px; /* Уменьшено с 25px 50px */
+            font-size: 24px; /* Уменьшено с 32px */
             border-radius: 5px;
             cursor: pointer;
-            margin: 15px;
+            margin: 10px; /* Уменьшено с 15px */
             transition: all 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            min-width: 350px;
+            min-width: 250px; /* Уменьшено с 350px */
             text-align: center;
             border: 2px solid #5d4037;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -114,7 +115,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 20px;
+            gap: 15px; /* Уменьшено с 20px */
         }
         
         .button:hover {
@@ -139,7 +140,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 800px;
+            max-width: 700px; /* Уменьшено с 800px */
         }
         
         .parchment {
@@ -191,10 +192,10 @@
             transform: scale(1) rotate(0);
         }
         
-        /* Анимация книги для кнопки Пособие - УВЕЛИЧЕНА ДО 144px */
+        /* Анимация книги для кнопки Пособие - КНИГА ОСТАЛАСЬ 144px */
         .book-icon {
-            width: 144px; /* УВЕЛИЧЕНО ДО 144px */
-            height: 144px; /* УВЕЛИЧЕНО ДО 144px */
+            width: 144px; /* КНИГА НЕ УМЕНЬШЕНА */
+            height: 144px; /* КНИГА НЕ УМЕНЬШЕНА */
             transition: transform 0.5s ease, opacity 0.5s ease;
             position: relative;
         }
@@ -226,8 +227,8 @@
         
         .icon-container {
             position: relative;
-            width: 144px; /* УВЕЛИЧЕНО ДО 144px */
-            height: 144px; /* УВЕЛИЧЕНО ДО 144px */
+            width: 144px; /* КНИГА НЕ УМЕНЬШЕНА */
+            height: 144px; /* КНИГА НЕ УМЕНЬШЕНА */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -257,8 +258,8 @@
         }
         
         .static-book {
-            width: 144px; /* УВЕЛИЧЕНО ДО 144px */
-            height: 144px; /* УВЕЛИЧЕНО ДО 144px */
+            width: 144px; /* КНИГА НЕ УМЕНЬШЕНА */
+            height: 144px; /* КНИГА НЕ УМЕНЬШЕНА */
             background: url('kniga_1.png') no-repeat center center;
             background-size: contain;
         }
@@ -270,7 +271,8 @@
         
         <!-- Главное меню -->
         <div id="main-menu" class="screen">
-            <h1>🤖 Программирование Робота</h1>
+            <!-- ИКОНКА РОБОТА УДАЛЕНА -->
+            <h1>Программирование Робота</h1>
             <p class="parchment">Программируйте робота для выполнения заданий на различных уровнях</p>
             
             <div class="menu-buttons">
