@@ -1,0 +1,6 @@
+services:
+  - type: web
+    name: robot-programming-game
+    env: static
+    buildCommand: ""
+    startCommand: "npx serve -s -l $PORT"
