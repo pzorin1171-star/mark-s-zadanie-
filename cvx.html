@@ -187,7 +187,40 @@
             transform: scale(1) rotate(0);
         }
         
-        .lock-container {
+        /* Анимация книги для кнопки Пособие */
+        .book-icon {
+            width: 24px;
+            height: 24px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            position: relative;
+        }
+        
+        .book-closed {
+            background: url('kniga_2.png') no-repeat center center;
+            background-size: contain;
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        .book-open {
+            background: url('kniga_1.png') no-repeat center center;
+            background-size: contain;
+            opacity: 0;
+            transform: scale(0.9) rotate(-5deg);
+            position: absolute;
+        }
+        
+        #tutorial-btn:hover .book-closed {
+            opacity: 0;
+            transform: scale(0.9) rotate(5deg);
+        }
+        
+        #tutorial-btn:hover .book-open {
+            opacity: 1;
+            transform: scale(1) rotate(0);
+        }
+        
+        .icon-container {
             position: relative;
             width: 24px;
             height: 24px;
@@ -208,13 +241,19 @@
             
             <div class="menu-buttons">
                 <button class="button" id="levels-btn">
-                    <div class="lock-container">
+                    <div class="icon-container">
                         <div class="lock-icon lock-closed"></div>
                         <div class="lock-icon lock-open"></div>
                     </div>
                     Уровни
                 </button>
-                <button class="button" id="tutorial-btn">📖 Пособие</button>
+                <button class="button" id="tutorial-btn">
+                    <div class="icon-container">
+                        <div class="book-icon book-closed"></div>
+                        <div class="book-icon book-open"></div>
+                    </div>
+                    Пособие
+                </button>
             </div>
         </div>
         
