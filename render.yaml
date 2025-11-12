@@ -1,6 +1,7 @@
 services:
   - type: web
-    name: robot-programming-game
-    env: static
-    buildCommand: ""
-    startCommand: "npx serve -s -l $PORT"
+    name: mark's zadanie
+    env: node
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    publishDir: "."
