@@ -79,6 +79,10 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
             text-align: center;
             font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
         
         p {
@@ -189,8 +193,8 @@
         
         /* Анимация книги для кнопки Пособие - увеличенная в 3 раза */
         .book-icon {
-            width: 72px; /* Увеличено с 48px до 72px (в 3 раза от исходного 24px) */
-            height: 72px; /* Увеличено с 48px до 72px (в 3 раза от исходного 24px) */
+            width: 72px;
+            height: 72px;
             transition: transform 0.5s ease, opacity 0.5s ease;
             position: relative;
         }
@@ -222,8 +226,8 @@
         
         .icon-container {
             position: relative;
-            width: 72px; /* Увеличено с 48px до 72px для книги */
-            height: 72px; /* Увеличено с 48px до 72px для книги */
+            width: 72px;
+            height: 72px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -232,11 +236,31 @@
         /* Специальный контейнер для замка, чтобы сохранить размер 48px */
         .lock-container {
             position: relative;
-            width: 72px;
-            height: 72px;
+            width: 48px;
+            height: 48px;
             display: flex;
             align-items: center;
             justify-content: center;
+        }
+        
+        /* Статические иконки для заголовков */
+        .static-icon {
+            display: inline-block;
+            vertical-align: middle;
+        }
+        
+        .static-lock {
+            width: 60px;
+            height: 60px;
+            background: url('button_1.png') no-repeat center center;
+            background-size: contain;
+        }
+        
+        .static-book {
+            width: 60px;
+            height: 60px;
+            background: url('kniga_1.png') no-repeat center center;
+            background-size: contain;
         }
     </style>
 </head>
@@ -269,7 +293,10 @@
         
         <!-- Экран уровней -->
         <div id="levels-screen" class="screen hidden">
-            <h2>📚 Уровни</h2>
+            <h2>
+                <span class="static-icon static-lock"></span>
+                Уровни
+            </h2>
             <p class="parchment">Выберите уровень для программирования робота</p>
             
             <button class="button" id="levels-back-btn">← Назад</button>
@@ -281,7 +308,10 @@
         
         <!-- Экран пособия -->
         <div id="tutorial-screen" class="screen hidden">
-            <h2>📖 Пособие</h2>
+            <h2>
+                <span class="static-icon static-book"></span>
+                Пособие
+            </h2>
             
             <button class="button" id="tutorial-back-btn">← Назад</button>
             
