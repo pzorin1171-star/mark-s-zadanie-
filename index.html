@@ -94,19 +94,19 @@
             color: #efebe9;
         }
         
-        /* УМЕНЬШЕННЫЕ КНОПКИ */
+        /* УМЕНЬШЕННЫЕ КНОПКИ ПО ШИРИНЕ */
         .button {
             background: linear-gradient(to bottom, #8d6e63, #6d4c41);
             color: #fff;
             border: none;
-            padding: 15px 30px; /* Уменьшено с 25px 50px */
-            font-size: 24px; /* Уменьшено с 32px */
+            padding: 15px 20px; /* Уменьшено по ширине */
+            font-size: 20px; /* Уменьшено */
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px; /* Уменьшено с 15px */
+            margin: 8px; /* Уменьшено */
             transition: all 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            min-width: 250px; /* Уменьшено с 350px */
+            min-width: 180px; /* Уменьшено по ширине */
             text-align: center;
             border: 2px solid #5d4037;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
@@ -115,7 +115,7 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 15px; /* Уменьшено с 20px */
+            gap: 10px; /* Уменьшено */
         }
         
         .button:hover {
@@ -140,7 +140,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 700px; /* Уменьшено с 800px */
+            max-width: 600px; /* Уменьшено */
         }
         
         .parchment {
@@ -161,8 +161,8 @@
         
         /* Анимация замка для кнопки Уровни */
         .lock-icon {
-            width: 48px;
-            height: 48px;
+            width: 32px; /* Уменьшено для баланса */
+            height: 32px; /* Уменьшено для баланса */
             transition: transform 0.5s ease, opacity 0.5s ease;
             position: relative;
         }
@@ -237,8 +237,8 @@
         /* Специальный контейнер для замка */
         .lock-container {
             position: relative;
-            width: 48px;
-            height: 48px;
+            width: 32px; /* Уменьшено для баланса */
+            height: 32px; /* Уменьшено для баланса */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -271,7 +271,6 @@
         
         <!-- Главное меню -->
         <div id="main-menu" class="screen">
-            <!-- ИКОНКА РОБОТА УДАЛЕНА -->
             <h1>Программирование Робота</h1>
             <p class="parchment">Программируйте робота для выполнения заданий на различных уровнях</p>
             
