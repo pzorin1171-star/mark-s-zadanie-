@@ -160,27 +160,40 @@
             border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="%238d6e63" stroke-width="4"/></svg>') 8 round;
         }
         
-        /* Анимация замка для кнопки Уровни - уменьшен для кнопки 72px */
-        .lock-icon {
-            width: 40px; /* Уменьшено для кнопки 72px */
-            height: 40px; /* Уменьшено для кнопки 72px */
-            transition: transform 0.5s ease, opacity 0.5s ease;
+        /* ОБЩИЙ СТИЛЬ ДЛЯ ВСЕХ КОНТЕЙНЕРОВ ИКОНОК */
+        .icon-container {
             position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Устанавливаем одинаковую высоту для всех иконок */
+            height: 48px;
+            width: 48px;
+            /* Смещение для выравнивания по вертикали */
+            margin-top: -2px;
+        }
+        
+        /* СТИЛИ ДЛЯ ЗАМКА */
+        .lock-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            transition: transform 0.5s ease, opacity 0.5s ease;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         
         .lock-closed {
-            background: url('button_2.png') no-repeat center center;
-            background-size: contain;
+            background-image: url('button_2.png');
             opacity: 1;
             transform: scale(1);
         }
         
         .lock-open {
-            background: url('button_1.png') no-repeat center center;
-            background-size: contain;
+            background-image: url('button_1.png');
             opacity: 0;
             transform: scale(0.8) rotate(15deg);
-            position: absolute;
         }
         
         #levels-btn:hover .lock-closed {
@@ -193,58 +206,40 @@
             transform: scale(1) rotate(0);
         }
         
-        /* Анимация книги для кнопки Пособие - уменьшена для кнопки 72px */
+        /* СТИЛИ ДЛЯ КНИГИ */
         .book-icon {
-            width: 144px; /* Уменьшено для кнопки 72px */
-            height: 144px; /* Уменьшено для кнопки 72px */
+            position: absolute;
+            /* Исходный размер 144px, уменьшаем до 48px */
+            width: 144px;
+            height: 144px;
+            /* Масштабируем до нужного размера */
+            transform: scale(0.333);
             transition: transform 0.5s ease, opacity 0.5s ease;
-            position: relative;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
         }
         
         .book-closed {
-            background: url('kniga_2.png') no-repeat center center;
-            background-size: contain;
+            background-image: url('kniga_2.png');
             opacity: 1;
-            transform: scale(1);
+            transform: scale(0.333);
         }
         
         .book-open {
-            background: url('kniga_1.png') no-repeat center center;
-            background-size: contain;
+            background-image: url('kniga_1.png');
             opacity: 0;
-            transform: scale(0.9) rotate(-5deg);
-            position: absolute;
+            transform: scale(0.3) rotate(-5deg);
         }
         
         #tutorial-btn:hover .book-closed {
             opacity: 0;
-            transform: scale(0.9) rotate(5deg);
+            transform: scale(0.3) rotate(5deg);
         }
         
         #tutorial-btn:hover .book-open {
             opacity: 1;
-            transform: scale(1) rotate(0);
-        }
-        
-        .icon-container {
-            position: relative;
-            width: 144px; /* Уменьшено для кнопки 72px */
-            height: 144px; /* Уменьшено для кнопки 72px */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        /* Специальный контейнер для замка - уменьшен для кнопки 72px */
-        .lock-container {
-            position: relative;
-            width: 40px; /* Уменьшено для кнопки 72px */
-            height: 40px; /* Уменьшено для кнопки 72px */
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            /* ИЗМЕНЕНИЕ: Поднял замок на 4 пикселя вверх */
-            margin-top: -4px;
+            transform: scale(0.333) rotate(0);
         }
         
         /* Статические иконки для заголовков */
@@ -279,7 +274,7 @@
             
             <div class="menu-buttons">
                 <button class="button" id="levels-btn">
-                    <div class="lock-container">
+                    <div class="icon-container">
                         <div class="lock-icon lock-closed"></div>
                         <div class="lock-icon lock-open"></div>
                     </div>
