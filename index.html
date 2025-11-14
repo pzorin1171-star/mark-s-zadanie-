@@ -166,18 +166,18 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /* Устанавливаем одинаковую высоту для всех иконок */
-            height: 48px;
-            width: 48px;
+            /* Увеличиваем контейнеры для больших иконок */
+            height: 60px;
+            width: 60px;
             /* Смещение для выравнивания по вертикали */
             margin-top: -2px;
         }
         
-        /* СТИЛИ ДЛЯ ЗАМКА */
+        /* СТИЛИ ДЛЯ ЗАМКА - УВЕЛИЧЕННЫЙ РАЗМЕР */
         .lock-icon {
             position: absolute;
-            width: 48px;
-            height: 48px;
+            width: 60px;  /* Увеличил размер */
+            height: 60px; /* Увеличил размер */
             transition: transform 0.5s ease, opacity 0.5s ease;
             background-size: contain;
             background-repeat: no-repeat;
@@ -206,13 +206,14 @@
             transform: scale(1) rotate(0);
         }
         
-        /* СТИЛИ ДЛЯ КНИГИ */
+        /* СТИЛИ ДЛЯ КНИГИ - УВЕЛИЧЕННЫЙ ВИДИМЫЙ РАЗМЕР */
         .book-icon {
             position: absolute;
-            /* Исходный размер 144px, уменьшаем до 48px */
+            /* Исходный размер 144px, но мы увеличиваем видимый размер */
             width: 144px;
             height: 144px;
-            /* Масштабируем до нужного размера */
+            /* Увеличиваем масштаб для большего видимого размера */
+            transform: scale(0.45); /* Увеличил масштаб с 0.333 до 0.45 */
             transition: transform 0.5s ease, opacity 0.5s ease;
             background-size: contain;
             background-repeat: no-repeat;
@@ -227,16 +228,17 @@
         .book-open {
             background-image: url('kniga_1.png');
             opacity: 0;
-            transform: scale(0.3) rotate(-5deg);
+            transform: scale(0.4) rotate(-5deg); /* Скорректировал для анимации */
         }
         
         #tutorial-btn:hover .book-closed {
             opacity: 0;
-            transform: scale(0.3) rotate(5deg);
+            transform: scale(0.4) rotate(5deg); /* Скорректировал для анимации */
         }
         
         #tutorial-btn:hover .book-open {
             opacity: 1;
+            transform: scale(0.45) rotate(0); /* Скорректировал для анимации */
         }
         
         /* Статические иконки для заголовков */
