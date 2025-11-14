@@ -176,8 +176,8 @@
         /* СТИЛИ ДЛЯ ЗАМКА */
         .lock-icon {
             position: absolute;
-            width: 144px;
-            height: 144px;
+            width: 48px;
+            height: 48px;
             transition: transform 0.5s ease, opacity 0.5s ease;
             background-size: contain;
             background-repeat: no-repeat;
@@ -213,7 +213,6 @@
             width: 144px;
             height: 144px;
             /* Масштабируем до нужного размера */
-            transform: scale(1);
             transition: transform 0.5s ease, opacity 0.5s ease;
             background-size: contain;
             background-repeat: no-repeat;
@@ -223,7 +222,6 @@
         .book-closed {
             background-image: url('kniga_2.png');
             opacity: 1;
-            transform: scale(0.333);
         }
         
         .book-open {
@@ -239,7 +237,6 @@
         
         #tutorial-btn:hover .book-open {
             opacity: 1;
-            transform: scale(0.333) rotate(0);
         }
         
         /* Статические иконки для заголовков */
