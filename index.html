@@ -94,24 +94,29 @@
             color: #efebe9;
         }
         
-        /* КНОПКИ КАК В ПЕРВОНАЧАЛЬНОМ ВАРИАНТЕ */
+        /* ВСЕ КНОПКИ ВЫСОТОЙ 72px */
         .button {
             background: linear-gradient(to bottom, #8d6e63, #6d4c41);
             color: #fff;
             border: none;
-            padding: 15px 30px;
+            padding: 0 30px;
             font-size: 22px;
             border-radius: 5px;
             cursor: pointer;
             margin: 10px;
             transition: all 0.3s;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-            min-width: 150px;
+            min-width: 250px;
             text-align: center;
             border: 2px solid #5d4037;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
             font-weight: bold;
             letter-spacing: 1px;
+            height: 72px; /* Фиксированная высота */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
         }
         
         .button:hover {
@@ -136,7 +141,7 @@
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            max-width: 400px;
+            max-width: 600px;
         }
         
         .parchment {
@@ -155,10 +160,10 @@
             border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="%238d6e63" stroke-width="4"/></svg>') 8 round;
         }
         
-        /* Анимация замка для кнопки Уровни - ВОЗВРАЩЕН К 24px */
+        /* Анимация замка для кнопки Уровни - уменьшен для кнопки 72px */
         .lock-icon {
-            width: 48px;
-            height: 48px;
+            width: 40px; /* Уменьшено для кнопки 72px */
+            height: 40px; /* Уменьшено для кнопки 72px */
             transition: transform 0.5s ease, opacity 0.5s ease;
             position: relative;
         }
@@ -188,10 +193,10 @@
             transform: scale(1) rotate(0);
         }
         
-        /* Анимация книги для кнопки Пособие - КНИГА 144px */
+        /* Анимация книги для кнопки Пособие - уменьшена для кнопки 72px */
         .book-icon {
-            width: 144px;
-            height: 144px;
+            width: 50px; /* Уменьшено для кнопки 72px */
+            height: 50px; /* Уменьшено для кнопки 72px */
             transition: transform 0.5s ease, opacity 0.5s ease;
             position: relative;
         }
@@ -223,18 +228,18 @@
         
         .icon-container {
             position: relative;
-            width: 144px;
-            height: 144px;
+            width: 50px; /* Уменьшено для кнопки 72px */
+            height: 50px; /* Уменьшено для кнопки 72px */
             display: flex;
             align-items: center;
             justify-content: center;
         }
         
-        /* Специальный контейнер для замка */
+        /* Специальный контейнер для замка - уменьшен для кнопки 72px */
         .lock-container {
             position: relative;
-            width: 24px;
-            height: 24px;
+            width: 40px; /* Уменьшено для кнопки 72px */
+            height: 40px; /* Уменьшено для кнопки 72px */
             display: flex;
             align-items: center;
             justify-content: center;
@@ -254,18 +259,10 @@
         }
         
         .static-book {
-            width: 144px;
-            height: 144px;
+            width: 60px;
+            height: 60px;
             background: url('kniga_1.png') no-repeat center center;
             background-size: contain;
-        }
-
-        /* Специальные стили для кнопок с иконками */
-        .button-with-icon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
         }
     </style>
 </head>
@@ -279,14 +276,14 @@
             <p class="parchment">Программируйте робота для выполнения заданий на различных уровнях</p>
             
             <div class="menu-buttons">
-                <button class="button button-with-icon" id="levels-btn">
+                <button class="button" id="levels-btn">
                     <div class="lock-container">
                         <div class="lock-icon lock-closed"></div>
                         <div class="lock-icon lock-open"></div>
                     </div>
                     Уровни
                 </button>
-                <button class="button button-with-icon" id="tutorial-btn">
+                <button class="button" id="tutorial-btn">
                     <div class="icon-container">
                         <div class="book-icon book-closed"></div>
                         <div class="book-icon book-open"></div>
