@@ -270,36 +270,60 @@
             background-size: contain;
         }
         
-        /* === ИЗМЕНЕНИЕ: ЗАМОК 144px И ПОДНЯТ НА 40px === */
+        /* === ИЗМЕНЕНИЕ: ЗАМОК 144px И ПОДНЯТ В СУММЕ НА 132px === */
         /* Стили для анимированного замка на заголовке */
         .castle-icon {
             position: absolute;
-            /* === ИЗМЕНЕНИЕ: Размер замка 144px вместо 400px === */
+            /* === ИЗМЕНЕНИЕ: Размер замка 144px === */
             width: 144px;
             height: 144px;
             background: url('zamok.png') no-repeat center center;
             background-size: contain;
-            /* === ИЗМЕНЕНИЕ: Поднят на 40px вверх (было -20px) === */
+            /* === ИЗМЕНЕНИЕ: Поднят в сумме на 132px (было -40px) === */
             top: -132px;
             left: 50%;
             transform: translateX(-50%) translateY(-200px);
-            /* Анимация вылета сверху */
-            animation: castleFlyIn 1.8s ease-out 0.3s forwards;
+            /* === ИЗМЕНЕНИЕ: Улучшенная анимация замка === */
+            animation: castleFlyIn 2s ease-out 0.3s forwards, castleFloat 3s ease-in-out 2.3s infinite;
         }
         
-        /* Анимация вылета замка сверху */
+        /* === ИЗМЕНЕНИЕ: Улучшенная анимация вылета замка сверху === */
         @keyframes castleFlyIn {
             0% {
                 opacity: 0;
-                transform: translateX(-50%) translateY(-200px) rotate(15deg);
+                transform: translateX(-50%) translateY(-400px) rotate(25deg) scale(0.8);
+            }
+            40% {
+                opacity: 0.8;
+                transform: translateX(-50%) translateY(-50px) rotate(-10deg) scale(1.1);
             }
             70% {
                 opacity: 1;
-                transform: translateX(-50%) translateY(10px) rotate(-5deg);
+                transform: translateX(-50%) translateY(20px) rotate(5deg) scale(0.95);
+            }
+            85% {
+                opacity: 1;
+                transform: translateX(-50%) translateY(-5px) rotate(-2deg) scale(1.02);
             }
             100% {
                 opacity: 1;
+                transform: translateX(-50%) translateY(0) rotate(0) scale(1);
+            }
+        }
+        
+        /* === ИЗМЕНЕНИЕ: Добавлена анимация плавающего замка === */
+        @keyframes castleFloat {
+            0%, 100% {
                 transform: translateX(-50%) translateY(0) rotate(0);
+            }
+            25% {
+                transform: translateX(-50%) translateY(-8px) rotate(1deg);
+            }
+            50% {
+                transform: translateX(-50%) translateY(-4px) rotate(-0.5deg);
+            }
+            75% {
+                transform: translateX(-50%) translateY(-6px) rotate(0.5deg);
             }
         }
     </style>
@@ -312,7 +336,7 @@
         <div id="main-menu" class="screen">
             <div class="title-container">
                 <h1>Программирование Робота
-                    <!-- === ИЗМЕНЕНИЕ: Замок теперь 144px и поднят на 40px === -->
+                    <!-- === ИЗМЕНЕНИЕ: Замок теперь 144px и поднят в сумме на 132px === -->
                     <div class="castle-icon"></div>
                 </h1>
             </div>
