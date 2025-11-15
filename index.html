@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -271,14 +270,17 @@
             background-size: contain;
         }
         
+        /* === ИЗМЕНЕНИЕ: ЗАМОК 144px И ПОДНЯТ НА 40px === */
         /* Стили для анимированного замка на заголовке */
         .castle-icon {
             position: absolute;
-            width: 400px;
-            height: 400px;
+            /* === ИЗМЕНЕНИЕ: Размер замка 144px вместо 400px === */
+            width: 144px;
+            height: 144px;
             background: url('zamok.png') no-repeat center center;
             background-size: contain;
-            top: -20px; /* Поднят на 20px вверх */
+            /* === ИЗМЕНЕНИЕ: Поднят на 40px вверх (было -20px) === */
+            top: -40px;
             left: 50%;
             transform: translateX(-50%) translateY(-200px);
             /* Анимация вылета сверху */
@@ -310,6 +312,7 @@
         <div id="main-menu" class="screen">
             <div class="title-container">
                 <h1>Программирование Робота
+                    <!-- === ИЗМЕНЕНИЕ: Замок теперь 144px и поднят на 40px === -->
                     <div class="castle-icon"></div>
                 </h1>
             </div>
