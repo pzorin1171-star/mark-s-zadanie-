@@ -326,6 +326,89 @@
                 transform: translateX(-50%) translateY(-6px) rotate(0.5deg);
             }
         }
+        
+        /* === ДОБАВЛЕНИЕ: Стили для робота === */
+        .robot-container {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            width: 180px;
+            height: 180px;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .robot {
+            width: 150px;
+            height: 150px;
+            background: url('robot.png') no-repeat center center;
+            background-size: contain;
+            animation: robotFloat 4s ease-in-out infinite, robotRotate 8s linear infinite;
+            filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.5));
+        }
+        
+        .robot-shadow {
+            width: 100px;
+            height: 20px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            margin-top: -10px;
+            animation: shadowPulse 4s ease-in-out infinite;
+        }
+        
+        /* Анимация плавающего движения робота */
+        @keyframes robotFloat {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            25% {
+                transform: translateY(-15px);
+            }
+            50% {
+                transform: translateY(-5px);
+            }
+            75% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        /* Анимация вращения робота */
+        @keyframes robotRotate {
+            0%, 100% {
+                transform: rotate(0deg);
+            }
+            25% {
+                transform: rotate(2deg);
+            }
+            50% {
+                transform: rotate(0deg);
+            }
+            75% {
+                transform: rotate(-2deg);
+            }
+        }
+        
+        /* Анимация пульсации тени */
+        @keyframes shadowPulse {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 0.4;
+            }
+            25% {
+                transform: scale(0.9);
+                opacity: 0.3;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 0.5;
+            }
+            75% {
+                transform: scale(0.95);
+                opacity: 0.35;
+            }
+        }
     </style>
 </head>
 <body>
@@ -357,6 +440,12 @@
                     </div>
                     Пособие
                 </button>
+            </div>
+            
+            <!-- Добавлен робот с анимацией -->
+            <div class="robot-container">
+                <div class="robot"></div>
+                <div class="robot-shadow"></div>
             </div>
         </div>
         
